@@ -19,6 +19,15 @@ apply plugin: 'org.jetbrains.kotlin.android'
 android {
   compileSdkVersion safeExtGet('compileSdkVersion', 33)
   namespace "com.rtncalculator"
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_11
+    targetCompatibility JavaVersion.VERSION_11
+  }
+
+  kotlinOptions {
+    jvmTarget = '11'
+  }
 }
 
 repositories {
@@ -29,3 +38,4 @@ repositories {
 dependencies {
   implementation 'com.facebook.react:react-native'
 }
+
